@@ -1,14 +1,11 @@
 import pandas as pd
 import plotly.express as px
 import plotly.graph_objects as go
-import plotly.io as pio
 import streamlit as st
 
-pio.renderers.default = 'vscode'
-pio.templates.default = 'plotly'
 
 
-df=pd.read_csv('C:/Users/Johnny/OneDrive/Desktop/Data Visualisation/health.csv')
+df=pd.read_csv('https://raw.githubusercontent.com/johnnymkh/plotly_streamlit/refs/heads/main/health.csv')
 # original dataset cleaned using Data Wrangler
 
 # reorder column for readability
@@ -111,7 +108,7 @@ st.divider()
 st.subheader('Average Number of :green[Care Centers] by Percentage of Elderly*')
 
 
-demography = pd.read_csv('C:/Users/Johnny/OneDrive/Desktop/Data Visualisation/demography.csv')
+demography = pd.read_csv('https://raw.githubusercontent.com/johnnymkh/plotly_streamlit/refs/heads/main/demography.csv')
 merged_df = pd.merge(df, demography, on='Town')
 
 # remove data error (Trablous Elderly 99%)
